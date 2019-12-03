@@ -136,7 +136,7 @@ def crp5(image):
     return crp_size
 
 
-@app.route('/upload', methods=['POST']) #POST will get the data and perform operatins
+@app.route('/upload', methods=['GET','POST']) #POST will get the data and perform operatins
 def post_image():
 
     target=os.path.join(APP_ROOT, 'static/')
