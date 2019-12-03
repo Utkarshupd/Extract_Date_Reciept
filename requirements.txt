@@ -5,4 +5,3 @@ pandas>=0.19
 opencv-python>=3.2.0.7
 pytesseract>=0.3.0
 datefinder>=0.7.0
-os>=3.1
