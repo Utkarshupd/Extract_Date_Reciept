@@ -212,7 +212,7 @@ def post_image():
         except:
             date = "Null"
 
-        return flask.render_template('index.html', pred="The date is {}".format(date))
+        return flask.render_template('end.html', pred=date)
 
 
 # if this is the main thread of execution first load the model and
