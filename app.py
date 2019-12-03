@@ -9,7 +9,7 @@ import pytesseract
 import flask
 import sys
 import os
-from matplotlib import pyplot as plt
+
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # initialize our Flask application and the Keras model
