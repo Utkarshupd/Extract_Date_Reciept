@@ -3,6 +3,6 @@ gunicorn==19.9.0
 numpy>=1.9.2
 scipy>=0.15.1
 pandas>=0.19
-cv2>=4.1.1
+opencv-python
 pytesseract>=0.3.0
 datefinder
