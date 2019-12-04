@@ -191,7 +191,7 @@ def post_image():
         # crop the region
         img1=cv2.imread(destination)
         cropped = img1[y1:y2, x1:x2]
-        tess = "/".join([APP_ROOT, 'tess'])
+        tess = "/".join([APP_ROOT, '.apt/usr/bin/tess'])
         filenaam='tesseract.exe'
         teese = "/".join([tess, filenaam])
 
