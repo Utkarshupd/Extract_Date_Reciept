@@ -27,7 +27,9 @@ def crp1(image):
     crp_size=[]
     try:
 
-        frame = cv2.imread(image)
+        Image = cv2.imread(image)
+        frame=cv2.GaussianBlur(Image,(7,7),0)
+
         img = cv2.cvtColor(frame, cv2.COLOR_BGR2HLS)
 
         Lchannel = img[:, :, 1]
@@ -50,7 +52,9 @@ def crp2(image):
     crp_size = []
     try:
 
-        frame = cv2.imread(image)
+        Image = cv2.imread(image)
+        frame=cv2.GaussianBlur(Image,(7,7),0)
+        
         img = cv2.cvtColor(frame, cv2.COLOR_BGR2HLS)
 
         Lchannel = img[:, :, 1]
@@ -74,7 +78,9 @@ def crp3(image):
     crp_size = []
     try:
 
-        frame = cv2.imread(image)
+        Image = cv2.imread(image)
+        frame=cv2.GaussianBlur(Image,(7,7),0)
+        
         img = cv2.cvtColor(frame, cv2.COLOR_BGR2HLS)
 
         Lchannel = img[:, :, 1]
@@ -97,7 +103,9 @@ def crp4(image):
     crp_size = []
     try:
 
-        frame = cv2.imread(image)
+        Image = cv2.imread(image)
+        frame=cv2.GaussianBlur(Image,(7,7),0)
+        
         img = cv2.cvtColor(frame, cv2.COLOR_BGR2HLS)
 
         Lchannel = img[:, :, 1]
