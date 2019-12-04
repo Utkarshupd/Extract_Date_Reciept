@@ -16,7 +16,6 @@ import os
 app = flask.Flask(__name__)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
-print(APP_ROOT)
 
 @app.route('/')
 @app.route('/home')
@@ -149,10 +148,10 @@ def post_image():
         filename1 = upload.filename
         # This is to verify files are supported
         ext = os.path.splitext(filename1)[1]
-        if (ext == ".jpeg") or (ext == ".jpg"):
+        if (ext == ".jpeg") or (ext == ".jpg") or (ext == ".png"):
             print("File supported moving on...")
         else:
-            return 'Image Not Uploaded'
+            return "Only 'jpeg', 'jpg', 'png' files are supported" 
         destination = "/".join([target, filename1])
         print("Accept incoming file:", filename1)
         print("Save it to:", destination)
@@ -191,13 +190,7 @@ def post_image():
         # crop the region
         img1=cv2.imread(destination)
         cropped = img1[y1:y2, x1:x2]
-        tess = "/".join([APP_ROOT, '.apt/usr/bin/tess'])
-        filenaam='tesseract.exe'
-        teese = "/".join([tess, filenaam])
-
-        pat='/app/.apt/usr/bin/tesseract'
-        #pytesseract.pytesseract.tesseract_cmd = pat
-
+      
         text = pytesseract.image_to_string(cropped)
 
         datefinder.ValueError = ValueError, OverflowError
