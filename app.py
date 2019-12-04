@@ -196,7 +196,7 @@ def post_image():
         teese = "/".join([tess, filenaam])
 
         pat='/app/.apt/usr/bin/tesseract'
-        pytesseract.pytesseract.tesseract_cmd = pat
+        #pytesseract.pytesseract.tesseract_cmd = pat
 
         text = pytesseract.image_to_string(cropped)
 
