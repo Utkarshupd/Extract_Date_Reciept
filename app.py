@@ -10,13 +10,14 @@ import flask
 import sys
 import os
 
-pytesseract.pytesseract.tesseract_cmd = r'tesseract.exe'
+
 
 # initialize our Flask application and the Keras model
 app = flask.Flask(__name__)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
-
+print(APP_ROOT)
+pytesseract.pytesseract.tesseract_cmd = r'APP_ROOT/tesseract.exe'
 @app.route('/')
 @app.route('/home')
 def upload_image():
