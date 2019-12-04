@@ -17,7 +17,7 @@ app = flask.Flask(__name__)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 print(APP_ROOT)
-pytesseract.pytesseract.tesseract_cmd = r'APP_ROOT/tesseract.exe'
+
 @app.route('/')
 @app.route('/home')
 def upload_image():
@@ -191,6 +191,8 @@ def post_image():
         # crop the region
         img1=cv2.imread(destination)
         cropped = img1[y1:y2, x1:x2]
+        pytesseract.pytesseract.tesseract_cmd = r'target/tesseract.exe'
+
         text = pytesseract.image_to_string(cropped)
 
         datefinder.ValueError = ValueError, OverflowError
