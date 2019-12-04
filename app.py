@@ -149,7 +149,7 @@ def post_image():
         filename1 = upload.filename
         # This is to verify files are supported
         ext = os.path.splitext(filename1)[1]
-        if (ext == ".jpeg") or (ext == ".png") or (ext == ".jpg"):
+        if (ext == ".jpeg") or (ext == ".jpg"):
             print("File supported moving on...")
         else:
             return 'Image Not Uploaded'
