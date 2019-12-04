@@ -191,9 +191,12 @@ def post_image():
         # crop the region
         img1=cv2.imread(destination)
         cropped = img1[y1:y2, x1:x2]
-        tess = "/".join([target, 'tesseract.exe'])
+        tess = "/".join([APP_ROOT, 'tess/'])
+        filenaam='tesseract.exe'
+        teese = "/".join([tess, filenaam])
 
-        pytesseract.pytesseract.tesseract_cmd = tess
+
+        pytesseract.pytesseract.tesseract_cmd = teese
 
         text = pytesseract.image_to_string(cropped)
 
